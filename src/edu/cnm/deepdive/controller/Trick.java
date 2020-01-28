@@ -1,5 +1,10 @@
 package edu.cnm.deepdive.controller;
 
+/**
+ * Encapsulates the suits of standard playing card. The enum includes a {@Link #} and
+ * color methods, to return the immutable Unicode symbol and color color enum instance of any suits.
+ */
+
 import edu.cnm.deepdive.model.Card;
 import edu.cnm.deepdive.model.Deck;
 import edu.cnm.deepdive.model.Suit.Color;
@@ -23,10 +28,18 @@ public class Trick {
     trick.report();
   }
 
+  /**
+   * Swap{@Link Color} instance value for this suit.
+   */
+
+
   private void prepare() {
     deck = new Deck();
     deck.shuffle(rng);
   }
+
+  /** Preparing to shuffle {@Deck}
+   */
 
   private void split() {
     redPile = new LinkedList<>();
@@ -39,6 +52,13 @@ public class Trick {
       }
     }
   }
+
+  /**
+   * Split{@Link Color} instance value for this suit.
+   *
+   * Split {@Link Color} value.
+   */
+
 
   private void swap() {
     int swapSize = rng.nextInt(1 + Math.min(blackPile.size(), redPile.size()));

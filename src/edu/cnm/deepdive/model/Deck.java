@@ -1,5 +1,12 @@
 package edu.cnm.deepdive.model;
 
+/**
+ * Encapsulate a single playing card as a combination of {@Link Suit} and {@Link Rank}. Instance
+ * of this class contains values.
+ * @author ro417
+ */
+
+
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,6 +21,12 @@ public class Deck {
   private List<Card> cards;
   private List<Card> dealt;
 
+  /**
+   * suit{@Link Suit} value of card.
+   * Rank{@Rank Rank} value of card.
+   */
+
+
   public Deck(){
     cards = new ArrayList<>();
     dealt = new LinkedList<>();
@@ -23,6 +36,11 @@ public class Deck {
       }
     }
   }
+
+  /**
+   * Suit{@Link Suit} value of cards being sorted out.
+   */
+
 
   public Card deal() {
     Card card = cards.isEmpty() ? null : cards.remove(0);
@@ -47,6 +65,9 @@ public class Deck {
   public int dealt() {
     return dealt.size();
   }
+  /**Rank{@Link Rank} value of cards being sorted out.
+   * */
+
 
   @Override
   public String toString() {
